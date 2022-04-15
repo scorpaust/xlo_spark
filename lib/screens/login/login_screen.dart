@@ -7,6 +7,9 @@ class LoginScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Entrar'),
         centerTitle: true,
+      ),
+      body: const Card(
+        margin: EdgeInsets.symmetric(horizontal: 32),
       )
     );
   }
