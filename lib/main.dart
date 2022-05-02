@@ -40,7 +40,8 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           elevation: 0,
           color: Colors.purple
-        )
+        ),
+        cursorColor: Colors.orange
       ),
       home: BaseScreen()
     );
