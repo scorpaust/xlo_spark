@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b257e98f-4756-4f51-bfd4-afe1a453b135" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/screens/signup/components/field_title.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/signup/signup_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/custom_drawer_header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/custom_drawer_header.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/base/base_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/base/base_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/login/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login/login_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xlo_spark.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xlo_spark.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,45 +53,33 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="606" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1649890773845">
+    <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1658676895963">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="606" y="148" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1649890773845" />
-    <state x="506" y="358" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1649889095304">
+    <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1658676895963" />
+    <state width="1491" height="203" key="GridCell.Tab.0.bottom" timestamp="1658677115178">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="506" y="358" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.816@0.0.1536.816" timestamp="1649889095304" />
-    <state width="1491" height="203" key="GridCell.Tab.0.bottom" timestamp="1651518017478">
+    <state width="1491" height="203" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1658677115178" />
+    <state width="1491" height="203" key="GridCell.Tab.0.center" timestamp="1658677115178">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1491" height="203" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1651518017478" />
-    <state width="1491" height="203" key="GridCell.Tab.0.center" timestamp="1651518017478">
+    <state width="1491" height="203" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1658677115178" />
+    <state width="1491" height="203" key="GridCell.Tab.0.left" timestamp="1658677115178">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1491" height="203" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1651518017478" />
-    <state width="1491" height="203" key="GridCell.Tab.0.left" timestamp="1651518017478">
+    <state width="1491" height="203" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1658677115178" />
+    <state width="1491" height="203" key="GridCell.Tab.0.right" timestamp="1658677115178">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1491" height="203" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1651518017478" />
-    <state width="1491" height="203" key="GridCell.Tab.0.right" timestamp="1651518017478">
+    <state width="1491" height="203" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1658677115178" />
+    <state x="93" y="93" width="1350" height="630" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1662413661454">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1491" height="203" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1651518017478" />
-    <state x="439" y="45" key="SettingsEditor" timestamp="1649798250777">
+    <state x="93" y="93" width="1350" height="630" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.816@0.0.1536.816" timestamp="1662413661454" />
+    <state x="497" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1662413568095">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="439" y="45" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1649798250777" />
-    <state x="93" y="93" width="1350" height="630" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1651442509376">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="93" y="93" width="1350" height="630" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.816@0.0.1536.816" timestamp="1651442509376" />
-    <state x="497" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1651514897730">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="497" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1651514897730" />
-    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1650063600815">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1650063600815" />
+    <state x="497" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1662413568095" />
   </component>
 </project>

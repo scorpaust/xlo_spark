@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:xlo_spark/screens/signup/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -102,10 +103,10 @@ class LoginScreen extends StatelessWidget {
                                 ),
                                 GestureDetector(
                                   onTap: () {
-                                    /*
+
                                       Navigator.of(context).push(MaterialPageRoute(
-                                        builder: (_) => SignupScreen()));
-                                    */
+                                        builder: (_) => SignUpScreen()));
+
                                   },
                                   child: const Text(
                                     'Registe-se',
