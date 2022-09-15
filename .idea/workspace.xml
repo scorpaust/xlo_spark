@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b257e98f-4756-4f51-bfd4-afe1a453b135" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/screens/signup/components/field_title.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/signup/signup_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/helpers/extensions.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/stores/signup_store.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/stores/signup_store.g.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/login/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login/login_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/signup/signup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/signup/signup_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +29,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="27iLCciiq65oUpaTfLi7v6FOZld" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -52,34 +58,37 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1658676895963">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1658676895963" />
-    <state width="1491" height="203" key="GridCell.Tab.0.bottom" timestamp="1658677115178">
+    <state width="1491" height="205" key="GridCell.Tab.0.bottom" timestamp="1663252661297">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1491" height="203" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1658677115178" />
-    <state width="1491" height="203" key="GridCell.Tab.0.center" timestamp="1658677115178">
+    <state width="1491" height="205" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1663252661297" />
+    <state width="1491" height="205" key="GridCell.Tab.0.center" timestamp="1663252661296">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1491" height="203" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1658677115178" />
-    <state width="1491" height="203" key="GridCell.Tab.0.left" timestamp="1658677115178">
+    <state width="1491" height="205" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1663252661296" />
+    <state width="1491" height="205" key="GridCell.Tab.0.left" timestamp="1663252661296">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1491" height="203" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1658677115178" />
-    <state width="1491" height="203" key="GridCell.Tab.0.right" timestamp="1658677115178">
+    <state width="1491" height="205" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1663252661296" />
+    <state width="1491" height="205" key="GridCell.Tab.0.right" timestamp="1663252661297">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1491" height="203" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1658677115178" />
-    <state x="93" y="93" width="1350" height="630" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1662413661454">
+    <state width="1491" height="205" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1663252661297" />
+    <state x="93" y="93" width="1350" height="630" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1663195645914">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="93" y="93" width="1350" height="630" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.816@0.0.1536.816" timestamp="1662413661454" />
-    <state x="497" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1662413568095">
+    <state x="93" y="93" width="1350" height="630" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.816@0.0.1536.816" timestamp="1663195645914" />
+    <state x="497" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1663248756106">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="497" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1662413568095" />
+    <state x="497" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1663248756106" />
   </component>
 </project>
