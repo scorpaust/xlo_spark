@@ -1,5 +1,8 @@
 import 'package:mobx/mobx.dart';
 import 'package:xlo_spark/helpers/extensions.dart';
+import 'package:xlo_spark/repositories/user_repository.dart';
+
+import '../models/user.dart';
 part 'signup_store.g.dart';
 
 class SignupStore = _SignupStore with _$SignupStore;
@@ -125,11 +128,28 @@ abstract class _SignupStore with Store {
   @observable
   bool loading = false;
 
+  @observable
+  String error = '';
+
   @action
   Future<void> _signUp() async {
     loading = true;
 
-    await Future.delayed(Duration(seconds: 5));
+    final user = User(
+      name: name,
+      email: email,
+      phone: phone,
+      password: pass1,
+    );
+
+    try {
+      final resultUser = await UserRepository().signUp(user);
+
+      print(resultUser);
+
+    } catch(e) {
+      error = e.toString();
+    }
 
     loading = false;
   }

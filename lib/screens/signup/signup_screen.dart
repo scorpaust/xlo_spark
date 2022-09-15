@@ -5,6 +5,8 @@ import 'package:xlo_spark/screens/login/login_screen.dart';
 import 'package:xlo_spark/screens/signup/components/field_title.dart';
 import 'package:xlo_spark/stores/signup_store.dart';
 
+import '../../components/custom_drawer/error_box.dart';
+
 class SignUpScreen extends StatelessWidget {
 
   final SignupStore signupStore = new SignupStore();
@@ -31,6 +33,15 @@ class SignUpScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     mainAxisSize: MainAxisSize.min,
                     children: [
+                      Observer(builder: (_) {
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          child: ErrorBox(
+                            message: signupStore.error
+                          ),
+                        );
+                      }
+                      ),
                       FieldTitle(
                         title: 'Apelido',
                         subtitle: 'Como aparecerá nos seus anúncios',
