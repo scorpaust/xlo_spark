@@ -9,7 +9,7 @@ class ErrorBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (message == null) {
+    if (message == '') {
       return Container();
     }
 

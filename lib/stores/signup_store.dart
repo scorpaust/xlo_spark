@@ -22,9 +22,9 @@ abstract class _SignupStore with Store {
   void setName(String value) => name = value;
 
   @computed
-  bool get nameValid => name != null && name.length > 6;
+  bool get nameValid => name != '' && name.length > 6;
   String? get nameError {
-    if (name == null || nameValid) {
+    if (name == '' || nameValid) {
       return null;
     }
     else if (name.isEmpty) {
@@ -44,10 +44,10 @@ abstract class _SignupStore with Store {
   void setEmail(String value) => _email = value;
 
   @computed
-  bool get emailValid => email != null && email.isEmailValid();
+  bool get emailValid => email != '' && email.isEmailValid();
 
   String? get emailError {
-    if (email == null || emailValid) {
+    if (email == '' || emailValid) {
       return null;
     }
     else if (email.isEmpty) {
@@ -66,10 +66,10 @@ abstract class _SignupStore with Store {
   void setPhone(String value) => phone = value;
 
   @computed
-  bool get phoneValid => phone != null && phone.length >= 14;
+  bool get phoneValid => phone != '' && phone.length >= 14;
 
   String? get phoneError {
-    if (phone == null || phoneValid)
+    if (phone == '' || phoneValid)
       return null;
     else if (phone.isEmpty)
       return 'Campo de preenchimento obrigatório';
@@ -84,10 +84,10 @@ abstract class _SignupStore with Store {
   void setPass1(String value) => pass1 = value;
 
   @computed
-  bool get pass1Valid => pass1 != null && pass1.length >= 6;
+  bool get pass1Valid => pass1 != '' && pass1.length >= 6;
 
   String? get pass1Error {
-    if (pass1 == null || pass1Valid) {
+    if (pass1 == '' || pass1Valid) {
       return null;
     }
     else if (pass1.isEmpty) {
@@ -105,10 +105,10 @@ abstract class _SignupStore with Store {
   void setPass2(String value) => pass2 = value;
 
   @computed
-  bool get pass2Valid => pass2 != null && pass2 == pass1;
+  bool get pass2Valid => pass2 != '' && pass2 == pass1;
 
   String? get pass2Error {
-    if (pass2 == null || pass2Valid) {
+    if (pass2 == '' || pass2Valid) {
       return null;
     }
     else if (pass2.isEmpty) {
