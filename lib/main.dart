@@ -4,6 +4,7 @@ import 'package:xlo_spark/screens/base/base_screen.dart';
 import 'package:parse_server_sdk_flutter/generated/i18n.dart';
 import 'package:parse_server_sdk_flutter/parse_server_sdk.dart';
 import 'package:xlo_spark/stores/page_store.dart';
+import 'package:xlo_spark/stores/user_manager_store.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,6 +16,7 @@ void main() async {
 
 void setupLocators() {
   GetIt.I.registerSingleton(PageStore());
+  GetIt.I.registerSingleton(UserManagerStore());
 }
 
 Future<void> InitializeParse() async {

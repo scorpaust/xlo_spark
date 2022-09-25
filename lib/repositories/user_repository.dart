@@ -45,4 +45,20 @@ class UserRepository {
       return Future.error({ParseErrors.getDescription(response.error!.code)});
     }
   }
+
+  Future<User?> currentUser() async {
+    final parseUser = await ParseUser.currentUser();
+
+    if (parseUser != null) {
+      final response = await parseUser.getCurrentUserFromServer(parseUser.sessionToken);
+
+      if (response.success) {
+        return mapParseToUser(response.result);
+      }
+      else {
+        await parseUser.logout();
+      }
+    }
+    return null;
+  }
 }

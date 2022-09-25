@@ -1,16 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
+import 'package:xlo_spark/stores/user_manager_store.dart';
 
 import '../../screens/login/login_screen.dart';
+import '../../stores/page_store.dart';
 
 class CustomDrawerHeader extends StatelessWidget {
+
+  final UserManagerStore userManagerStore = GetIt.I<UserManagerStore>();
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(builder: (_) => LoginScreen())
-        );
+        Navigator.of(context).pop();
+        if (userManagerStore.isLoggedIn) {
+            GetIt.I<PageStore>().SetPage(4);
+        } else {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => LoginScreen())
+            );
+        }
       },
       child: Container(
         color: Colors.purple,
@@ -28,18 +38,22 @@ class CustomDrawerHeader extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Text(
+                    userManagerStore.isLoggedIn ?
+                        userManagerStore.user.name :
                     'Acesse agora à sua conta!',
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 16,
                       fontWeight: FontWeight.w500
                     ),
                   ),
                   Text(
+                    userManagerStore.isLoggedIn ?
+                        userManagerStore.user.email :
                     'Clique aqui',
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 14,
                         fontWeight: FontWeight.w400

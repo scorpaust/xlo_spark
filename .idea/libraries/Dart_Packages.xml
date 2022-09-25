@@ -250,7 +250,7 @@
         <entry key="flutter">
           <value>
             <list>
-              <option value="C:/Flutter/flutter/packages/flutter/lib" />
+              <option value="$PROJECT_DIR$/../../../../Flutter/flutter/packages/flutter/lib" />
             </list>
           </value>
         </entry>
@@ -271,14 +271,14 @@
         <entry key="flutter_test">
           <value>
             <list>
-              <option value="C:/Flutter/flutter/packages/flutter_test/lib" />
+              <option value="$PROJECT_DIR$/../../../../Flutter/flutter/packages/flutter_test/lib" />
             </list>
           </value>
         </entry>
         <entry key="flutter_web_plugins">
           <value>
             <list>
-              <option value="C:/Flutter/flutter/packages/flutter_web_plugins/lib" />
+              <option value="$PROJECT_DIR$/../../../../Flutter/flutter/packages/flutter_web_plugins/lib" />
             </list>
           </value>
         </entry>
@@ -684,7 +684,7 @@
         <entry key="sky_engine">
           <value>
             <list>
-              <option value="C:/Flutter/flutter/bin/cache/pkg/sky_engine/lib" />
+              <option value="$PROJECT_DIR$/../../../../Flutter/flutter/bin/cache/pkg/sky_engine/lib" />
             </list>
           </value>
         </entry>
@@ -831,10 +831,10 @@
       </option>
     </properties>
     <CLASSES>
-      <root url="file://C:/Flutter/flutter/bin/cache/pkg/sky_engine/lib" />
-      <root url="file://C:/Flutter/flutter/packages/flutter/lib" />
-      <root url="file://C:/Flutter/flutter/packages/flutter_test/lib" />
-      <root url="file://C:/Flutter/flutter/packages/flutter_web_plugins/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../Flutter/flutter/bin/cache/pkg/sky_engine/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../Flutter/flutter/packages/flutter/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../Flutter/flutter/packages/flutter_test/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../Flutter/flutter/packages/flutter_web_plugins/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/_fe_analyzer_shared-38.0.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/analyzer-3.4.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/args-2.3.0/lib" />
