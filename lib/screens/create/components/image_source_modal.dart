@@ -2,10 +2,13 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
 class ImageSourceModal extends StatelessWidget {
-  const ImageSourceModal({Key? key}) : super(key: key);
+  const ImageSourceModal(this.onImageSelected);
+
+  final Function(File?) onImageSelected;
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +19,18 @@ class ImageSourceModal extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            FlatButton(
-              child: const Text('Câmera'),
+            TextButton(
+              child: const Text(
+                'Câmera',
+                style: TextStyle(color: Colors.black),
+              ),
               onPressed: getFromCamera,
             ),
-            FlatButton(
-              child: const Text('Galeria'),
+            TextButton(
+              child: const Text(
+                'Galeria',
+                style: TextStyle(color: Colors.black),
+              ),
               onPressed: getFromGallery,
             )
           ],
@@ -55,6 +64,8 @@ class ImageSourceModal extends StatelessWidget {
     final pickedFile =
         await ImagePicker().pickImage(source: ImageSource.camera);
 
+    if (pickedFile == null) return;
+
     final image = File(pickedFile!.path);
 
     imageSelected(image);
@@ -64,12 +75,30 @@ class ImageSourceModal extends StatelessWidget {
     final pickedFile =
         await ImagePicker().pickImage(source: ImageSource.gallery);
 
+    if (pickedFile == null) return;
+
     final image = File(pickedFile!.path);
 
     imageSelected(image);
   }
 
-  void imageSelected(File image) {
-    print(image.path);
+  Future<void> imageSelected(File image) async {
+    final croppedFile = await ImageCropper().cropImage(
+        sourcePath: image.path,
+        aspectRatio: CropAspectRatio(ratioX: 1, ratioY: 1),
+        uiSettings: [
+          AndroidUiSettings(
+            toolbarTitle: 'Editar Imagem',
+            toolbarColor: Colors.purple,
+            toolbarWidgetColor: Colors.white,
+          ),
+          IOSUiSettings(
+            title: 'Editar Imagem',
+            cancelButtonTitle: 'Cancelar',
+            doneButtonTitle: 'Concluir',
+          )
+        ]);
+    if (croppedFile == null) return;
+    onImageSelected(File(croppedFile.path));
   }
 }

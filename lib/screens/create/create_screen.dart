@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xlo_spark/components/custom_drawer/custom_drawer.dart';
-
-import 'components/images_field.dart';
+import 'package:xlo_spark/screens/create/components/images_field.dart';
+import 'package:xlo_spark/stores/create_store.dart';
 
 class CreateScreen extends StatelessWidget {
+  final CreateStore createStore = CreateStore();
+
   @override
   Widget build(BuildContext context) {
     const labelStyle = TextStyle(
@@ -28,7 +30,7 @@ class CreateScreen extends StatelessWidget {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
-            const ImagesField(),
+            ImagesField(createStore),
             TextFormField(
               decoration: const InputDecoration(
                 labelText: 'Título *',
