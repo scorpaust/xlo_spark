@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ErrorBox extends StatelessWidget {
-
-  ErrorBox({this.message = ''});
+  const ErrorBox({this.message = ''});
 
   final String message;
-
 
   @override
   Widget build(BuildContext context) {
@@ -23,20 +21,17 @@ class ErrorBox extends StatelessWidget {
             color: Colors.white,
             size: 40,
           ),
-          const SizedBox(width: 16,),
+          const SizedBox(
+            width: 16,
+          ),
           Expanded(
             child: Text(
               'Oops! ${message.toString()}. Por favor, tente de novo.',
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 14
-              ),
+              style: const TextStyle(color: Colors.white, fontSize: 14),
             ),
           )
         ],
       ),
     );
-
   }
-
 }

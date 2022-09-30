@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:parse_server_sdk_flutter/parse_server_sdk.dart';
+import 'package:xlo_spark/repositories/category_repository.dart';
 import 'package:xlo_spark/screens/base/base_screen.dart';
 import 'package:xlo_spark/stores/page_store.dart';
 import 'package:xlo_spark/stores/user_manager_store.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await InitializeParse();
+  await initializeParse();
   setupLocators();
   runApp(const MyApp());
 }
@@ -17,13 +18,17 @@ void setupLocators() {
   GetIt.I.registerSingleton(UserManagerStore());
 }
 
-Future<void> InitializeParse() async {
+Future<void> initializeParse() async {
   await Parse().initialize('YHjKJgs0kP9DtALCCJ5WuzVeJrWPcsaXigJ00FwS',
       'https://parseapi.back4app.com/',
       clientKey: 'jDl6576t5v38PwcPdZhcV0cdM6SMVKWoHfFX4pnK',
       autoSendSessionId: true,
       debug: true,
       coreStore: await CoreStoreSharedPrefsImp.getInstance());
+
+  final categories = await CategoryRepository().getList();
+
+  print(categories);
 }
 
 class MyApp extends StatelessWidget {
@@ -40,7 +45,8 @@ class MyApp extends StatelessWidget {
             visualDensity: VisualDensity.adaptivePlatformDensity,
             scaffoldBackgroundColor: Colors.purple,
             appBarTheme: const AppBarTheme(elevation: 0, color: Colors.purple),
-            cursorColor: Colors.orange),
+            textSelectionTheme:
+                const TextSelectionThemeData(cursorColor: Colors.orange)),
         home: BaseScreen());
   }
 }

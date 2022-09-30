@@ -66,7 +66,7 @@ class ImageSourceModal extends StatelessWidget {
 
     if (pickedFile == null) return;
 
-    final image = File(pickedFile!.path);
+    final image = File(pickedFile.path);
 
     imageSelected(image);
   }
@@ -77,7 +77,7 @@ class ImageSourceModal extends StatelessWidget {
 
     if (pickedFile == null) return;
 
-    final image = File(pickedFile!.path);
+    final image = File(pickedFile.path);
 
     imageSelected(image);
   }

@@ -5,12 +5,12 @@ import 'package:xlo_spark/repositories/user_repository.dart';
 import 'package:xlo_spark/stores/user_manager_store.dart';
 
 import '../models/user.dart';
+
 part 'signup_store.g.dart';
 
 class SignupStore = _SignupStore with _$SignupStore;
 
 abstract class _SignupStore with Store {
-
   @observable
   String _name = '';
 
@@ -28,11 +28,9 @@ abstract class _SignupStore with Store {
   String? get nameError {
     if (name == '' || nameValid) {
       return null;
-    }
-    else if (name.isEmpty) {
+    } else if (name.isEmpty) {
       return 'Campo de preenchimento obrigatório.';
-    }
-    else {
+    } else {
       return 'Nome muito curto.';
     }
   }
@@ -51,12 +49,9 @@ abstract class _SignupStore with Store {
   String? get emailError {
     if (email == '' || emailValid) {
       return null;
-    }
-    else if (email.isEmpty) {
+    } else if (email.isEmpty) {
       return 'Campo de preenchimento obrigatório.';
-    }
-    else
-    {
+    } else {
       return 'E-mail inválido.';
     }
   }
@@ -71,12 +66,13 @@ abstract class _SignupStore with Store {
   bool get phoneValid => phone != '' && phone.length >= 14;
 
   String? get phoneError {
-    if (phone == '' || phoneValid)
+    if (phone == '' || phoneValid) {
       return null;
-    else if (phone.isEmpty)
+    } else if (phone.isEmpty) {
       return 'Campo de preenchimento obrigatório';
-    else
+    } else {
       return 'Número de telemóvel inválido.';
+    }
   }
 
   @observable
@@ -91,11 +87,9 @@ abstract class _SignupStore with Store {
   String? get pass1Error {
     if (pass1 == '' || pass1Valid) {
       return null;
-    }
-    else if (pass1.isEmpty) {
+    } else if (pass1.isEmpty) {
       return 'Campo de preenchimento obrigatório.';
-    }
-    else {
+    } else {
       return 'Senha muito curta.';
     }
   }
@@ -112,17 +106,16 @@ abstract class _SignupStore with Store {
   String? get pass2Error {
     if (pass2 == '' || pass2Valid) {
       return null;
-    }
-    else if (pass2.isEmpty) {
+    } else if (pass2.isEmpty) {
       return 'Campo de preenchimento obrigatório.';
-    }
-    else {
+    } else {
       return 'As senhas não coincidem.';
     }
   }
 
   @computed
-  bool get isFormValid => nameValid && emailValid && phoneValid && pass1Valid && pass2Valid;
+  bool get isFormValid =>
+      nameValid && emailValid && phoneValid && pass1Valid && pass2Valid;
 
   @computed
   dynamic get signupPressed => (isFormValid && !loading) ? _signUp : null;
@@ -148,8 +141,7 @@ abstract class _SignupStore with Store {
       final resultUser = await UserRepository().signUp(user);
 
       GetIt.I<UserManagerStore>().setUser(resultUser);
-
-    } catch(e) {
+    } catch (e) {
       error = e.toString();
     }
 

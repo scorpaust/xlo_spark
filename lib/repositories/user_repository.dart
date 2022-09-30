@@ -25,13 +25,12 @@ class UserRepository {
 
   User mapParseToUser(ParseUser parseUser) {
     return User(
-      id: parseUser.objectId,
-      name: parseUser.get(keyUserName),
-      email: parseUser.get(keyUserEmail),
-      phone: parseUser.get(keyUserPhone),
-      type: Type.values[parseUser.get(keyUserType)],
-      createdAt: parseUser.get(keyUserCreatedAt)
-    );
+        id: parseUser.objectId,
+        name: parseUser.get(keyUserName),
+        email: parseUser.get(keyUserEmail),
+        phone: parseUser.get(keyUserPhone),
+        type: Type.values[parseUser.get(keyUserType)],
+        createdAt: parseUser.get(keyUserCreatedAt));
   }
 
   Future<User> loginWithEmail(String email, String password) async {
@@ -50,12 +49,12 @@ class UserRepository {
     final parseUser = await ParseUser.currentUser();
 
     if (parseUser != null) {
-      final response = await parseUser.getCurrentUserFromServer(parseUser.sessionToken);
+      final response =
+          await parseUser?.getCurrentUserFromServer(parseUser.sessionToken);
 
       if (response.success) {
         return mapParseToUser(response.result);
-      }
-      else {
+      } else {
         await parseUser.logout();
       }
     }

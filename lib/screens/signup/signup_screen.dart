@@ -7,7 +7,7 @@ import 'package:xlo_spark/stores/signup_store.dart';
 import '../../components/custom_drawer/error_box.dart';
 
 class SignUpScreen extends StatelessWidget {
-  final SignupStore signupStore = new SignupStore();
+  final SignupStore signupStore = SignupStore();
 
   @override
   Widget build(BuildContext context) {
@@ -141,20 +141,35 @@ class SignUpScreen extends StatelessWidget {
                                   height: 40,
                                   margin: const EdgeInsets.only(
                                       top: 20, bottom: 12),
-                                  child: RaisedButton(
-                                    color: Colors.orange,
-                                    disabledColor: Colors.orange.withAlpha(120),
+                                  child: ElevatedButton(
+                                    style: ButtonStyle(
+                                      elevation: MaterialStateProperty
+                                          .resolveWith<double>(
+                                              (Set<MaterialState> states) {
+                                        return 0.0;
+                                      }),
+                                      shape: MaterialStateProperty.all<
+                                              RoundedRectangleBorder>(
+                                          RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20))),
+                                      backgroundColor: MaterialStateProperty
+                                          .resolveWith<Color>(
+                                              (Set<MaterialState> states) {
+                                        if (states
+                                            .contains(MaterialState.disabled)) {
+                                          return Colors.orange.withAlpha(120);
+                                        } else {
+                                          return Colors.orange;
+                                        }
+                                      }),
+                                    ),
                                     child: signupStore.loading
                                         ? const CircularProgressIndicator(
                                             valueColor: AlwaysStoppedAnimation(
                                                 Colors.white),
                                           )
                                         : Text('REGISTAR'),
-                                    textColor: Colors.white,
-                                    elevation: 0,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(20)),
                                     onPressed: signupStore.signupPressed,
                                   ));
                             }),

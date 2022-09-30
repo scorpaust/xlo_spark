@@ -13,23 +13,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b257e98f-4756-4f51-bfd4-afe1a453b135" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/screens/create/components/image_dialog.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/stores/create_store.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/stores/create_store.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/category.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repositories/category_repository.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/custom_drawer_header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/custom_drawer_header.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated_plugin_registrant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated_plugin_registrant.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/custom_drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/custom_drawer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/error_box.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/error_box.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/page_tile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/page_tile.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repositories/table_keys.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositories/table_keys.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repositories/user_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositories/user_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/create/components/image_dialog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/create/components/image_dialog.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/create/components/image_source_modal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/create/components/image_source_modal.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/create/components/images_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/create/components/images_field.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/create/create_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/create/create_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/home_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/login/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login/login_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/signup/signup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/signup/signup_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stores/signup_store.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/stores/signup_store.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stores/user_manager_store.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/stores/user_manager_store.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,6 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
