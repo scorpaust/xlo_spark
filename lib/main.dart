@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:parse_server_sdk_flutter/parse_server_sdk.dart';
-import 'package:xlo_spark/repositories/category_repository.dart';
-import 'package:xlo_spark/screens/base/base_screen.dart';
+import 'package:xlo_spark/screens/category/category_screen.dart';
+import 'package:xlo_spark/stores/category_store.dart';
 import 'package:xlo_spark/stores/page_store.dart';
 import 'package:xlo_spark/stores/user_manager_store.dart';
+
+import 'models/category.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initializeParse();
   setupLocators();
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 void setupLocators() {
   GetIt.I.registerSingleton(PageStore());
   GetIt.I.registerSingleton(UserManagerStore());
+  GetIt.I.registerSingleton(CategoryStore());
 }
 
 Future<void> initializeParse() async {
@@ -25,15 +28,9 @@ Future<void> initializeParse() async {
       autoSendSessionId: true,
       debug: true,
       coreStore: await CoreStoreSharedPrefsImp.getInstance());
-
-  final categories = await CategoryRepository().getList();
-
-  print(categories);
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -47,6 +44,7 @@ class MyApp extends StatelessWidget {
             appBarTheme: const AppBarTheme(elevation: 0, color: Colors.purple),
             textSelectionTheme:
                 const TextSelectionThemeData(cursorColor: Colors.orange)),
-        home: BaseScreen());
+        home: CategoryScreen(
+            selected: Category(id: '*', description: 'Todas'), showAll: true));
   }
 }
