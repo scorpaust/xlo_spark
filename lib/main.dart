@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:parse_server_sdk_flutter/parse_server_sdk.dart';
-import 'package:xlo_spark/screens/category/category_screen.dart';
+import 'package:xlo_spark/screens/base/base_screen.dart';
 import 'package:xlo_spark/stores/category_store.dart';
 import 'package:xlo_spark/stores/page_store.dart';
 import 'package:xlo_spark/stores/user_manager_store.dart';
-
-import 'models/category.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -44,7 +42,6 @@ class MyApp extends StatelessWidget {
             appBarTheme: const AppBarTheme(elevation: 0, color: Colors.purple),
             textSelectionTheme:
                 const TextSelectionThemeData(cursorColor: Colors.orange)),
-        home: CategoryScreen(
-            selected: Category(id: '*', description: 'Todas'), showAll: true));
+        home: BaseScreen());
   }
 }
